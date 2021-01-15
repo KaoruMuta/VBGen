@@ -1,0 +1,12 @@
+version: '3'
+
+services: 
+  web:
+    image: flask
+    container_name: vbgen
+    build: .
+    command: python3 app/app.py
+    volumes: 
+      - .:/code
+    ports: 
+      - '5000:5000'
