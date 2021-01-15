@@ -1,12 +1,12 @@
 .body {
   margin: 0px;
+  font-family: "Lato";
 }
 
 footer {
   text-align: center;
   position: absolute;
   color: #FFFFFF;
-  font-family: "Lato";
   font-size: 15px;
   background-color: #2D8CFF;
   width: 100%;
