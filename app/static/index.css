@@ -17,6 +17,11 @@
   background-color: #2D8CFF;
 }
 
+.body-wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
 .button-wrapper {
   display: flex;
   flex-direction: column;
