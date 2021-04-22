@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/how_to_use')
+def how_to_use():
+    return render_template('how_to_use.html')
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('not_found.html'), 404
