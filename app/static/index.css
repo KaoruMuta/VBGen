@@ -29,6 +29,7 @@
 }
 
 .upload-button, .how-to-use-button {
+  text-align: center;
   background-color: #FFFFFF;
   border: none;
   color: #414155;
@@ -38,6 +39,10 @@
   border-radius: 10px;
   width: 80%;
   margin-top: 5%;
+}
+
+.upload-button input {
+  display: none;
 }
 
 .footer {
