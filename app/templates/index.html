@@ -10,7 +10,15 @@
   <body class="body">
     <div class="body-wrapper">
       <header class="header">
-        <h1 class=header-title>VBGen: Virtual Background Generator for Zoom</h1>
+        <a href="/" class=header-title>VBGen: Virtual Background Generator for Zoom</a>
+        <nav>
+          <ul>
+            <li>
+              <a class="how-to-use-link" href="/how_to_use">About</a>
+              <a class="login-link" href="/login">Login</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <div class="button-wrapper">
         <h1>Let's create your custom virtual background for Zoom!</h1>
@@ -19,9 +27,6 @@
           <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/*">
           </form>
-        </label>
-        <label class="how-to-use-button" onclick="location.href='/how_to_use'">
-          <i class="fas fa-question-circle"></i>  How to use VBGen
         </label>
       </div>
       <footer class="footer">&copy; 2021 Kaoru Muta.</footer>
