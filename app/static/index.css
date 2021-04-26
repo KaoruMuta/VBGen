@@ -30,7 +30,7 @@ ul {
   align-self: center;
 }
 
-.how-to-use-link, .login-link {
+.about-link, .login-link {
   font-size: 30px;
   font-weight: bold;
   color: #FFFFFF;
@@ -40,7 +40,7 @@ ul {
   align-self: flex-end;
 }
 
-.how-to-use-link:hover, .login-link:hover {
+.about-link:hover, .login-link:hover {
   text-decoration: underline;
 }
 

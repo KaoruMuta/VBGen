@@ -7,9 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/how_to_use')
+@app.route('/about')
 def how_to_use():
-    return render_template('how_to_use.html')
+    return render_template('about.html')
 
 @app.route('/login')
 def login():
