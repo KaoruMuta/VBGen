@@ -11,6 +11,10 @@ def index():
 def how_to_use():
     return render_template('how_to_use.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('not_found.html'), 404
