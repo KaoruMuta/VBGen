@@ -87,6 +87,7 @@ ul {
 
 .preview-wrapper {
   text-align: center;
+  font-size: 40px;
 }
 
 textarea {
@@ -94,7 +95,7 @@ textarea {
   resize: none;
 }
 
-.download-button {
+.add, .undo, .download {
   text-align: center;
   background-color: #414155;
   border: none;
@@ -103,11 +104,16 @@ textarea {
   font-family: "Lato";
   font-size: 30px;
   border-radius: 10px;
-  width: 100%;
+  width: 30%;
 }
 
 .download-button:hover {
   opacity: 0.7;
+}
+
+.action-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
