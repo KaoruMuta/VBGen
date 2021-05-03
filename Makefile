@@ -7,7 +7,7 @@ build:
 ps:
 	docker ps -a
 
-image:
+images:
 	docker images
 
 rm:
