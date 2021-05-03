@@ -25,13 +25,17 @@
         <label class="upload-button">
           <i class="fas fa-upload"></i>  Upload images
           <form action="/upload" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*">
+            <input type="file" name="file" accept="image/*" onchange="this.form.submit();">
           </form>
         </label>
       </div>
       <div class="result-wrapper">
         <div class="preview-wrapper">
-          <img src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px"><br><br>
+          {% if img_path %}
+            <img src="{{ img_path }}" alt="Not Found" height="225px" width="400px"><br><br>
+          {% else %}
+            <img src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px"><br><br>
+          {% endif %}
           <strong>Preview</strong>
         </div>
         <div class="result">
