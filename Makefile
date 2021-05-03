@@ -1,4 +1,4 @@
-IMAGE=Flask
+IMAGE=flask
 CONTAINER=vbgen
 
 build:
