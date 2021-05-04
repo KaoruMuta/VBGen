@@ -1,1 +1,26 @@
-console.log('Hello World!');
+const telopTextArea = document.getElementById('telop-textarea')
+const inputText = document.getElementById('input-text')
+const previewWrapper = document.getElementById('preview-wrapper')
+const previewImage = document.getElementById('preview-image')
+
+function updateTelopText(value) {
+  inputText.value = value;
+}
+
+function clearTextArea() {
+  telopTextArea.value = "";
+}
+
+function addTextInImage() {
+  const x = window.pageXOffset + previewImage.getBoundingClientRect().left;
+  const y = window.pageYOffset + previewImage.getBoundingClientRect().top;
+  let displayText = document.createElement('div');
+  displayText.innerHTML = inputText.value;
+  displayText.style.position = 'absolute';
+  displayText.style.left = x;
+  displayText.style.top = y;
+  // insert text in front of a preview image
+  previewWrapper.insertBefore(displayText, previewImage);
+  // clear text in textarea
+  clearTextArea();
+}
