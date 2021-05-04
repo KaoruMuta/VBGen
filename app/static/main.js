@@ -20,7 +20,7 @@ function changeColor() {
 function addTextInImage() {
   const x = window.pageXOffset + previewImage.getBoundingClientRect().left;
   const y = window.pageYOffset + previewImage.getBoundingClientRect().top;
-  let displayText = document.createElement('div');
+  const displayText = document.createElement('div');
   displayText.innerHTML = inputText.value;
   displayText.style.position = 'absolute';
   displayText.style.color = colorPicker.value;
