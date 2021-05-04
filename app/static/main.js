@@ -1,7 +1,8 @@
-const telopTextArea = document.getElementById('telop-textarea')
-const inputText = document.getElementById('input-text')
-const previewWrapper = document.getElementById('preview-wrapper')
-const previewImage = document.getElementById('preview-image')
+const telopTextArea = document.getElementById('telop-textarea');
+const inputText = document.getElementById('input-text');
+const previewWrapper = document.getElementById('preview-wrapper');
+const previewImage = document.getElementById('preview-image');
+
 
 function updateTelopText(value) {
   inputText.value = value;
