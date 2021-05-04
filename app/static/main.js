@@ -24,3 +24,10 @@ function addTextInImage() {
   // clear text in textarea
   clearTextArea();
 }
+
+function undoAddingTextInImage() {
+  const childrenCount = previewWrapper.children.length;
+  if (childrenCount > 4) {
+    previewWrapper.removeChild(previewWrapper.children[childrenCount - 5]);
+  }
+}
