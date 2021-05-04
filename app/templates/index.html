@@ -30,17 +30,18 @@
         </label>
       </div>
       <div class="result-wrapper">
-        <div class="preview-wrapper">
+        <div id="preview-wrapper" class="preview-wrapper">
           {% if img_path %}
             <img src="{{ img_path }}" alt="Not Found" height="225px" width="400px"><br><br>
           {% else %}
-            <img src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px"><br><br>
+            <img id="preview-image" src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px"><br><br>
           {% endif %}
           <strong>Preview</strong>
         </div>
         <div class="result">
           <div>
-            Text <textarea rows="5" cols="80"></textarea>
+            Text <textarea id="telop-textarea" rows="5" cols="80" onkeyup="updateTelopText(value);"></textarea>
+            <input type="hidden" id="input-text" value="">
           </div>
           <div>
             Color <input type="color" id="color" value="#FFFFFF">
@@ -50,7 +51,7 @@
             Y <input size="10" required> px
           </div>
           <div class="action-wrapper">
-            <button class="add"><i class="fas fa-plus-circle"></i><br>Add</button>
+            <button class="add" onclick="addTextInImage();"><i class="fas fa-plus-circle"></i><br>Add</button>
             <button class="undo"><i class="fas fa-undo-alt"></i><br>Undo</button>            
             <button type="submit" class="download"><i class="fas fa-download"></i><br>Download</button>
           </div>
