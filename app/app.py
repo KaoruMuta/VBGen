@@ -26,14 +26,6 @@ def index():
     else:
         return render_template('index.html')
 
-@app.route('/about')
-def how_to_use():
-    return render_template('about.html')
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
 @app.errorhandler(404)
 def not_found(error):
     return render_template('not_found.html'), 404
