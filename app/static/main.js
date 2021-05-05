@@ -38,26 +38,30 @@ function validateInputNumber(input) {
   return result;
 }
 
-function addTextInImage() {
-  const x = window.pageXOffset + previewImage.getBoundingClientRect().left;
-  const y = window.pageYOffset + previewImage.getBoundingClientRect().top;
-  const marginX = outputPoint(inputX);
-  const marginY = outputPoint(inputY);
-  if (!marginX || !marginY) {
-    alert('Please input the valid number');
-    return;
+function addTextInImage(didImageUploaded) {
+  if (didImageUploaded) {
+    const x = window.pageXOffset + previewImage.getBoundingClientRect().left;
+    const y = window.pageYOffset + previewImage.getBoundingClientRect().top;
+    const marginX = outputPoint(inputX);
+    const marginY = outputPoint(inputY);
+    if (!marginX || !marginY) {
+      alert('Please input the valid number');
+      return;
+    }
+    
+    const displayText = document.createElement('div');
+    displayText.innerHTML = inputText.value;
+    displayText.style.position = 'absolute';
+    displayText.style.color = colorPicker.value;
+    displayText.style.left = String(x + parseInt(marginX, 10)) + 'px';
+    displayText.style.top = String(y + parseInt(marginY, 10)) + 'px';
+    // insert text in front of a preview image
+    previewImageWrapper.insertBefore(displayText, previewImage);
+    // clear text in textarea
+    clearTextArea();
+  } else {
+    alert('Please upload an image!');
   }
-  
-  const displayText = document.createElement('div');
-  displayText.innerHTML = inputText.value;
-  displayText.style.position = 'absolute';
-  displayText.style.color = colorPicker.value;
-  displayText.style.left = String(x + parseInt(marginX, 10)) + 'px';
-  displayText.style.top = String(y + parseInt(marginY, 10)) + 'px';
-  // insert text in front of a preview image
-  previewImageWrapper.insertBefore(displayText, previewImage);
-  // clear text in textarea
-  clearTextArea();
 }
 
 function undoAddingTextInImage() {
@@ -67,15 +71,19 @@ function undoAddingTextInImage() {
   }
 }
 
-function downloadImage() {
-  html2canvas(document.querySelector('#preview-image-wrapper'), {
-    height: previewImage.height,
-    windowHeight: previewImage.height
-  }).then(canvas => {
-    // download specified canvas
-    const element = document.createElement('a');
-    element.href = canvas.toDataURL();
-    element.download = 'virtual_background.png';
-    element.click();
-  });
+function downloadImage(didImageUploaded) {
+  if (didImageUploaded) {
+    html2canvas(document.querySelector('#preview-image-wrapper'), {
+      height: previewImage.height,
+      windowHeight: previewImage.height
+    }).then(canvas => {
+      // download specified canvas
+      const element = document.createElement('a');
+      element.href = canvas.toDataURL();
+      element.download = 'virtual_background.png';
+      element.click();
+    });
+  } else {
+    alert('Please upload an image!');
+  }
 }
