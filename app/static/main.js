@@ -66,3 +66,16 @@ function undoAddingTextInImage() {
     previewImageWrapper.removeChild(previewImageWrapper.children[childrenCount - 2]);
   }
 }
+
+function downloadImage() {
+  html2canvas(document.querySelector('#preview-image-wrapper'), {
+    height: previewImage.height,
+    windowHeight: previewImage.height
+  }).then(canvas => {
+    // download specified canvas
+    const element = document.createElement('a');
+    element.href = canvas.toDataURL();
+    element.download = 'virtual_background.png';
+    element.click();
+  });
+}
