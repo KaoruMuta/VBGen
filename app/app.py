@@ -16,7 +16,7 @@ UPLOAD_FOLDER = '/static/upload/'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = ABSOLUTE_UPLOAD_FOLDER
 app.secret_key = config.SECRET_KEY
-app.permanent_session_lifetime = timedelta(minutes=5)
+app.permanent_session_lifetime = timedelta(minutes=1)
 
 @app.route('/')
 def index():
