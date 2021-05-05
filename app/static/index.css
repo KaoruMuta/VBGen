@@ -107,7 +107,7 @@ textarea {
   width: 30%;
 }
 
-.download-button:hover {
+.add:hover, .undo:hover, .download:hover {
   opacity: 0.7;
 }
 
