@@ -90,6 +90,10 @@ ul {
   font-size: 40px;
 }
 
+.preview-image-wrapper {
+  position: relative;
+}
+
 textarea {
   vertical-align: top;
   resize: none;
