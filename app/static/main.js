@@ -53,8 +53,8 @@ function addTextInImage(didImageUploaded) {
     displayText.innerHTML = inputText.value;
     displayText.style.position = 'absolute';
     displayText.style.color = colorPicker.value;
-    displayText.style.left = String(x + parseInt(marginX, 10)) + 'px';
-    displayText.style.top = String(y + parseInt(marginY, 10)) + 'px';
+    displayText.style.left = marginX + 'px';
+    displayText.style.top = marginY + 'px';
     // insert text in front of a preview image
     previewImageWrapper.insertBefore(displayText, previewImage);
     // clear text in textarea
