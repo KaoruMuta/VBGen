@@ -1,6 +1,6 @@
 const telopTextArea = document.getElementById('telop-textarea');
 const inputText = document.getElementById('input-text');
-const previewWrapper = document.getElementById('preview-wrapper');
+const previewImageWrapper = document.getElementById('preview-image-wrapper');
 const previewImage = document.getElementById('preview-image');
 const colorPicker = document.getElementById('color');
 const inputX = document.getElementById('input-x');
@@ -55,14 +55,14 @@ function addTextInImage() {
   displayText.style.left = String(x + parseInt(marginX, 10)) + 'px';
   displayText.style.top = String(y + parseInt(marginY, 10)) + 'px';
   // insert text in front of a preview image
-  previewWrapper.insertBefore(displayText, previewImage);
+  previewImageWrapper.insertBefore(displayText, previewImage);
   // clear text in textarea
   clearTextArea();
 }
 
 function undoAddingTextInImage() {
-  const childrenCount = previewWrapper.children.length;
-  if (childrenCount > 4) {
-    previewWrapper.removeChild(previewWrapper.children[childrenCount - 5]);
+  const childrenCount = previewImageWrapper.children.length;
+  if (childrenCount > 1) {
+    previewImageWrapper.removeChild(previewImageWrapper.children[childrenCount - 2]);
   }
 }

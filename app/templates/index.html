@@ -31,12 +31,17 @@
       </div>
       <div class="result-wrapper">
         <div id="preview-wrapper" class="preview-wrapper">
-          {% if img_path %}
-            <img src="{{ img_path }}" alt="Not Found" height="225px" width="400px"><br><br>
-          {% else %}
-            <img id="preview-image" src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px"><br><br>
-          {% endif %}
-          <strong>Preview</strong>
+          <div id="preview-image-wrapper">
+            {% if img_path %}
+            <img src="{{ img_path }}" alt="Not Found" height="225px" width="400px">
+            {% else %}
+              <img id="preview-image" src="static/resources/back.jpg" alt="Not Found" height="225px" width="400px">
+            {% endif %}
+          </div>
+          <div>
+            <br>
+            <strong>Preview</strong>
+          </div>
         </div>
         <div class="result">
           <div>
