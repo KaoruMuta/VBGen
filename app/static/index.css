@@ -128,14 +128,30 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 300px;
-  width: 480px;
+  height: 60%;
+  width: 80%;
 }
 
 .modal-close {
   background-color: rgba(255, 255, 255, 0.0);
   color: #414155;
   border: none;
+}
+
+.modal-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.modal-content-wrapper h2 {
+  margin: auto;
+}
+
+.modal-content-wrapper hr {
+  border: 1px;
+  color: #414155;
 }
 
 .footer {
