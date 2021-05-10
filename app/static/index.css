@@ -30,7 +30,7 @@ ul {
   align-self: center;
 }
 
-.about-link {
+.about-link, .contact-link {
   font-size: 30px;
   font-weight: bold;
   color: #FFFFFF;
@@ -42,7 +42,7 @@ ul {
   align-self: flex-end;
 }
 
-.about-link:hover, .login-link:hover {
+.about-link:hover, .contact-link:hover {
   text-decoration: underline;
 }
 
