@@ -1,1 +1,1 @@
-web: gunicorn app/app:app
+web: docker compose up
