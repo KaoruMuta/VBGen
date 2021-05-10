@@ -14,7 +14,7 @@ ABSOLUTE_UPLOAD_FOLDER = './app/static/upload/'
 UPLOAD_FOLDER = '/static/upload/'
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = ABSOLUTE_UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = config.SECRET_KEY
 app.permanent_session_lifetime = timedelta(minutes=1)
 
