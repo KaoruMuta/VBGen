@@ -93,9 +93,9 @@ function downloadImage(didImageUploaded) {
 }
 
 $('.about-link').click(function() {
-  if ($('.modal-area').css('display') == 'none') {
-    $('.modal-area').fadeIn('slow');
-  } else {
-    $('.modal-area').fadeOut('slow');
-  }
+  $('.modal-area').fadeIn('slow');
+});
+
+$('.modal-close').click(function() {
+  $('.modal-area').fadeOut('slow');
 });
