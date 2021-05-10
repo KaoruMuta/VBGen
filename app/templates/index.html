@@ -21,12 +21,12 @@
       </header>
       <div class="button-wrapper">
         <h1>Let's create your custom virtual background for Zoom!</h1>
-        <label class="upload-button">
-          <i class="fas fa-upload"></i>  Upload images
+        <div class="upload-button">
+          <div class="upload-icon-text"><i class="fas fa-upload"></i><br>Upload images</div>
           <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/*" onchange="this.form.submit();">
           </form>
-        </label>
+        </div>
       </div>
       <div class="result-wrapper">
         <div id="preview-wrapper" class="preview-wrapper">
