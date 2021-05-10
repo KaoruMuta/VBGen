@@ -8,6 +8,7 @@ const inputY = document.getElementById('input-y');
 
 window.onload = function() {
   $('.modal-area').hide();
+  $('.modal-mask').hide();
 };
 
 function updateTelopText(value) {
@@ -92,10 +93,14 @@ function downloadImage(didImageUploaded) {
   }
 }
 
-$('.about-link').click(function() {
-  $('.modal-area').fadeIn('slow');
-});
-
-$('.modal-close').click(function() {
-  $('.modal-area').fadeOut('slow');
+$(function() {
+  $('.about-link').click(function() {
+    $('.modal-mask').show();
+    $('.modal-area').fadeIn('slow');
+  });
+  
+  $('.modal-close').click(function() {
+    $('.modal-mask').hide();
+    $('.modal-area').fadeOut('slow');
+  });
 });
