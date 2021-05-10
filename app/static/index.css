@@ -30,10 +30,12 @@ ul {
   align-self: center;
 }
 
-.about-link, .login-link {
+.about-link {
   font-size: 30px;
   font-weight: bold;
   color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.0);
+  border: none;
   font-family: "Lato";
   margin: 0px;
   padding: 10px 20px 10px 10px;
