@@ -122,6 +122,22 @@ textarea {
   justify-content: space-between;
 }
 
+.modal-area {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 480px;
+  z-index: 1;
+}
+
+.modal-title {
+  display: block;
+  width: 100px;
+  background-color: #2D8CFF;
+}
+
 .footer {
   text-align: center;
   position: absolute;

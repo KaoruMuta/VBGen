@@ -6,6 +6,10 @@ const colorPicker = document.getElementById('color');
 const inputX = document.getElementById('input-x');
 const inputY = document.getElementById('input-y');
 
+window.onload = function() {
+  $('.modal-area').hide();
+};
+
 function updateTelopText(value) {
   inputText.value = value;
 }
@@ -87,3 +91,11 @@ function downloadImage(didImageUploaded) {
     alert('Please upload an image!');
   }
 }
+
+$('.about-link').click(function() {
+  if ($('.modal-area').css('display') == 'none') {
+    $('.modal-area').fadeIn('slow');
+  } else {
+    $('.modal-area').fadeOut('slow');
+  }
+});
