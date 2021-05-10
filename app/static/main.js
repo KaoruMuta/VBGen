@@ -98,12 +98,18 @@ $(function() {
   $('.about-link').click(function() {
     $('.modal-mask').show();
     $('.modal-close').show();
-    $('.modal-area').fadeIn('slow');
+    $('.modal-area').fadeIn();
   });
   
   $('.modal-close').click(function() {
     $('.modal-mask').hide();
     $('.modal-close').hide();
-    $('.modal-area').fadeOut('slow');
+    $('.modal-area').fadeOut();
+  });
+
+  $('.modal-mask').click(function() {
+    $('.modal-mask').hide();
+    $('.modal-close').hide();
+    $('.modal-area').fadeOut();
   });
 });
