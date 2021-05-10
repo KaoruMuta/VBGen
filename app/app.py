@@ -44,7 +44,7 @@ def upload_image():
         filename = secure_filename(file.filename)
         # img_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         print(os.getcwd())
-        img_path = os.path.join('/app/static/upload', filename)
+        img_path = os.path.join('./static/upload', filename)
         file.save(img_path)
         rendering_img_path = os.path.join(UPLOAD_FOLDER, filename)
         session['path'] = rendering_img_path
