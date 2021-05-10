@@ -9,6 +9,7 @@ const inputY = document.getElementById('input-y');
 window.onload = function() {
   $('.modal-area').hide();
   $('.modal-mask').hide();
+  $('.modal-close').hide();
 };
 
 function updateTelopText(value) {
@@ -96,11 +97,13 @@ function downloadImage(didImageUploaded) {
 $(function() {
   $('.about-link').click(function() {
     $('.modal-mask').show();
+    $('.modal-close').show();
     $('.modal-area').fadeIn('slow');
   });
   
   $('.modal-close').click(function() {
     $('.modal-mask').hide();
+    $('.modal-close').hide();
     $('.modal-area').fadeOut('slow');
   });
 });
