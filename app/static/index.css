@@ -194,6 +194,10 @@ textarea {
   text-align: center;
 }
 
+.important-content {
+  text-align: center;
+}
+
 .footer {
   text-align: center;
   position: absolute;
