@@ -6,11 +6,11 @@ const colorPicker = document.getElementById('color');
 const inputX = document.getElementById('input-x');
 const inputY = document.getElementById('input-y');
 
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function() {
   $('.modal-area').hide();
   $('.modal-mask').hide();
   $('.modal-close').hide();
-};
+});
 
 function updateTelopText(value) {
   inputText.value = value;
