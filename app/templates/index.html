@@ -24,8 +24,8 @@
         <h1>Let's create your custom virtual background for Zoom!</h1>
         <label class="upload-button">
           <div class="upload-icon-text">
-            <i class="fas fa-upload"></i>
-            <br>Upload images
+            <i class="fas fa-upload"></i><br>
+            Upload images
           </div>
           <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/*" onchange="this.form.submit();">
@@ -60,13 +60,31 @@
           </div>
           <div class="action-wrapper">
             {% if img_path %}
-              <button class="add" onclick="addTextInImage(true);"><i class="fas fa-plus-circle"></i><br>Add</button>
-              <button class="undo" onclick="undoAddingTextInImage();"><i class="fas fa-undo-alt"></i><br>Undo</button>
-              <button class="download" onclick="downloadImage(true);"><i class="fas fa-download"></i><br>Download</button>
+              <button class="add" onclick="addTextInImage(true);">
+                <i class="fas fa-plus-circle"></i><br>
+                Add
+              </button>
+              <button class="undo" onclick="undoAddingTextInImage();">
+                <i class="fas fa-undo-alt"></i><br>
+                Undo
+              </button>
+              <button class="download" onclick="downloadImage(true);">
+                <i class="fas fa-download"></i><br>
+                Download
+              </button>
             {% else %}
-              <button class="add" onclick="addTextInImage(false);"><i class="fas fa-plus-circle"></i><br>Add</button>
-              <button class="undo" onclick="undoAddingTextInImage();"><i class="fas fa-undo-alt"></i><br>Undo</button>
-              <button class="download" onclick="downloadImage(false);"><i class="fas fa-download"></i><br>Download</button>
+              <button class="add" onclick="addTextInImage(false);">
+                <i class="fas fa-plus-circle"></i><br>
+                Add
+              </button>
+              <button class="undo" onclick="undoAddingTextInImage();">
+                <i class="fas fa-undo-alt"></i><br>
+                Undo
+              </button>
+              <button class="download" onclick="downloadImage(false);">
+                <i class="fas fa-download"></i><br>
+                Download
+              </button>
             {% endif %}
           </div>
         </div>
